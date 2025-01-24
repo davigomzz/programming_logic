@@ -1,6 +1,11 @@
+# aqui ele recebe o dado no terminal do usuário (chomp para obter a string 
+# e to_f para converter em número decimal ou poderia ser to_i para um número inteiro)
+
 puts "Put Your Grade, With Uppercase And The Signal If Necessary"
 grade = gets.chomp
 
+# O switch case / when é básicamento uma if/else/elsif que tem o número de repetição alto
+# que no caso você precise fazer um número bem grande de "ifs"
 case grade
 when "A+"
   puts "Great Job!!"
