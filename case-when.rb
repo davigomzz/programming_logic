@@ -1,0 +1,31 @@
+puts "Put Your Grade, With Uppercase And The Signal If Necessary"
+grade = gets.chomp
+
+case grade
+when "A+"
+  puts "Great Job!!"
+when "A"
+  puts "Youre Doing Good!!"
+when "A-"
+  puts "Continue Learning!!"
+when "B+"
+  puts "Almost There!!"
+when "B"
+  puts "Keep trying!!"
+when "B-"
+  puts "You Can Reach An A!!"
+when "C+"
+  puts "So So "
+when "C"
+  puts " You Can Do Better"
+when "C-"
+  puts "Oh Oh Bad"
+when "D+"
+  puts "You Need to Study More"
+when "D"
+  puts "You Will Need To Do A Lot More Than That "
+when "F"
+  puts "You Need Help"
+else
+  puts "Invalid Grade"
+end
