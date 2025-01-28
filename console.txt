@@ -1,0 +1,2 @@
+estudar manipulação de dados no console do rails e quando 
+tiver uma duvida utilizar o nome da variável .methods
