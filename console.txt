@@ -1,2 +1,157 @@
 estudar manipulação de dados no console do rails e quando 
 tiver uma duvida utilizar o nome da variável .methods
+----------------------------------------------------------------------
+Manipulação de Variáveis
+Atribuindo Valores a Variáveis
+No Ruby, você pode atribuir valores a uma variável usando o operador =. Exemplos:
+
+
+name = "Davi"
+age = 23
+is_student = true
+Aqui:
+
+name é uma variável do tipo string.
+age é do tipo integer.
+is_student é do tipo boolean.
+Exibindo o Valor de uma Variável
+Para acessar o valor de uma variável, basta digitá-la no console:
+
+
+name # => "Davi"
+age  # => 23
+Reatribuindo Valores
+Você pode mudar o valor de uma variável a qualquer momento:
+
+
+name = "Gomes"
+age = 24
+Interpolação de Variáveis
+Para combinar strings e variáveis:
+
+
+puts "Meu nome é #{name} e eu tenho #{age} anos."
+# => Meu nome é Gomes e eu tenho 24 anos.
+Verificando o Tipo de uma Variável
+Use o método .class para saber o tipo de dado:
+
+
+name.class  # => String
+age.class   # => Integer
+
+--------------------------------------------------------------------
+Arrays
+Criando Arrays
+Arrays são listas de valores. Você pode criá-los de várias formas:
+
+
+fruits = ["banana", "apple", "grape"]
+numbers = [1, 2, 3, 4, 5]
+mixed = [1, "Davi", true, 3.14]
+Acessando Elementos do Array
+Os elementos do array podem ser acessados pelos índices (começam do zero):
+
+
+fruits[0] # => "banana"
+fruits[1] # => "apple"
+Também pode usar índices negativos para acessar de trás para frente:
+
+
+fruits[-1] # => "grape"
+Adicionando Elementos
+Use o método push ou o operador << para adicionar elementos:
+
+
+fruits.push("orange") # => ["banana", "apple", "grape", "orange"]
+fruits << "pear"      # => ["banana", "apple", "grape", "orange", "pear"]
+Removendo Elementos
+Você pode remover elementos com:
+
+
+fruits.pop    # Remove o último elemento ("pear")
+fruits.shift  # Remove o primeiro elemento ("banana")
+Iterando sobre Arrays
+Para percorrer todos os elementos de um array, use .each:
+
+
+fruits.each do |fruit|
+  puts fruit
+end
+# Saída:
+# apple
+# grape
+# orange
+-----------------------------------------------------------------------------------------
+
+Hashes
+Criando Hashes
+Hashes são como "dicionários", com pares de chave-valor:
+
+
+person = {
+  name: "Davi",
+  age: 23,
+  city: "Fortaleza"
+}
+Acessando Valores
+Use a chave para acessar o valor correspondente:
+
+
+person[:name]  # => "Davi"
+person[:city]  # => "Fortaleza"
+Adicionando ou Alterando Valores
+Para adicionar ou modificar um par chave-valor:
+
+
+person[:job] = "Developer" # Adiciona a chave :job
+person[:age] = 24          # Modifica o valor da chave :age
+Removendo Valores
+Use o método .delete para remover uma chave:
+
+
+person.delete(:city) # => "Fortaleza"
+Iterando sobre Hashes
+Para percorrer as chaves e valores:
+
+
+person.each do |key, value|
+  puts "#{key}: #{value}"
+end
+# Saída:
+# name: Davi
+# age: 24
+# job: Developer
+----------------------------------------------------------------------------
+Métodos Úteis para Arrays e Hashes
+Arrays
+Tamanho do Array:
+
+
+fruits.size # => 3
+Ordenar:
+
+
+numbers = [3, 1, 2]
+numbers.sort # => [1, 2, 3]
+Verificar se contém um elemento:
+
+
+fruits.include?("apple") # => true
+Remover duplicados:
+
+
+[1, 2, 2, 3].uniq # => [1, 2, 3]
+Hashes
+Listar todas as chaves:
+
+
+person.keys # => [:name, :age, :job]
+Listar todos os valores:
+
+
+person.values # => ["Davi", 24, "Developer"]
+Verificar se contém uma chave ou valor:
+
+
+person.key?(:name)  # => true
+person.value?(24)   # => true
